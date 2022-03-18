@@ -71,7 +71,7 @@ class HouseFilter extends QueryFilter
     public function min_price(int $min = 0)
     {
         return $this->builder->when($min, function ($query) use ($min) {
-            $query->where('price', '>', $min);
+            $query->where('price', '>=', $min);
 
         });
     }
@@ -86,7 +86,7 @@ class HouseFilter extends QueryFilter
     public function max_price(int $max = 0)
     {
         return $this->builder->when($max, function ($query) use ($max) {
-            $query->where('price', '<', $max);
+            $query->where('price', '<=', $max);
 
         });
     }
