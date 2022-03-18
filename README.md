@@ -8,3 +8,28 @@
    docker-compose up -d
 
    ```
+
+4. ```
+   docker exec -it admin_api sh
+
+   ```
+
+5. ```
+   composer install
+
+   ```
+
+6. ```
+   php artisan key:generate
+
+   ```
+
+7. ```
+   php artisan migrate
+
+   ```
+
+8. ```
+   php artisan db:seed
+
+   ```
